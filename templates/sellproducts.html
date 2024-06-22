@@ -1,0 +1,10 @@
+{%extends 'header.html'%}
+{%block main%}
+<form action="" method="post">
+    {%csrf_token%}
+    Price: <input type="number"  name="price" placeholder="Enter price" required><br>
+    Phone Number: <input type="tel" name="phone" placeholder="Enter number" required><br>
+    Address: <textarea name="address" id="" required ></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+{%endblock%}
