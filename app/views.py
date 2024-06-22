@@ -109,9 +109,26 @@ def crops(r):
 def products(r):
     return render(r,'products.html')
 @login_required
+def profile_page(r):
+    data=FarmingDetails.objects.filter(user=r.user)
+    if data:
+        data=data[0]
+    return render(r,'profile.html',{"farmingdetails":data})
+@login_required
 def buy_products(r,crop):
     data=Product.objects.filter(name=crop)
     return render(r,'buyproducts.html',{"products":data})
+from .forms import *
+@login_required
+def farming_details_form(request):
+    form=FarmingDetailsForm()
+    if request.method == 'POST':
+        form = FarmingDetailsForm(request.POST, user=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('/profile')
+    
+    return render(request, 'details.html', {'form': form})
 
 @login_required
 def sell_products(r,crop):

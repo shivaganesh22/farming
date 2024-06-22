@@ -1,0 +1,128 @@
+{% extends 'header.html' %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farming Details</title>
+<style>
+    /* Basic styling for form layout */
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    h2 {
+        text-align: center;
+    }
+    .details {
+        margin-bottom: 10px;
+    }
+    .label {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<a href="/add-details">Add details</a>
+<div class="container">
+    <h2>Farming Details</h2>
+    <div class="details">
+        <span class="label">Farmer's Name:</span>
+        <span>{{ farmingdetails.farmer_name }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Pincode:</span>
+        <span>{{ farmingdetails.pincode }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Aadhar Number:</span>
+        <span>{{ farmingdetails.aadhar_number }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Contact Number:</span>
+        <span>{{ farmingdetails.contact_number }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Area Ploughed (acres):</span>
+        <span>{{ farmingdetails.acres_ploughed }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Season:</span>
+        <span>{{ farmingdetails.season }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Crop Grown:</span>
+        <span>{{ farmingdetails.crop_grown }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Seeds Used:</span>
+        <span>{{ farmingdetails.seeds_used }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Date of Seed Sown:</span>
+        <span>{{ farmingdetails.date_seed_sown }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Transplanting:</span>
+        <span>{{ farmingdetails.transplanting }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Irrigation Method:</span>
+        <span>{{ farmingdetails.irrigation_method }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Fertilizers Used:</span>
+        <span>{{ farmingdetails.fertilizers_used }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Date of Harvesting:</span>
+        <span>{{ farmingdetails.date_harvesting }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Subfield:</span>
+        <span>{{ farmingdetails.subfield }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Variety Used:</span>
+        <span>{{ farmingdetails.variety_used }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Quantity Used:</span>
+        <span>{{ farmingdetails.quantity_used }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Irrigation Type:</span>
+        <span>{{ farmingdetails.irrigation_type }}</span>
+    </div>
+
+    <div class="details">
+        <span class="label">Fertilizers Type:</span>
+        <span>{{ farmingdetails.fertilizers_type }}</span>
+    </div>
+
+</div>
+
+</body>
+</html>
+{% endblock %}

@@ -39,4 +39,6 @@ urlpatterns = [
     path('deleteproducts/<id>/',delete_products),
     path('products/buy/<str:crop>/',buy_products),
     path('products/sell/<str:crop>/',sell_products),
+    path('add-details/',farming_details_form, name='farming_details_form'),
+    path('profile/',profile_page),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
