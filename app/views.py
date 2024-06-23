@@ -110,9 +110,8 @@ def products(r):
     return render(r,'products.html')
 @login_required
 def profile_page(r):
-    data=FarmingDetails.objects.filter(user=r.user)
-    if data:
-        data=data[-1]
+    data=FarmingDetails.objects.filter(user=r.user).last()
+    
     return render(r,'profile.html',{"farmingdetails":data})
 @login_required
 def buy_products(r,crop):
