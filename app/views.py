@@ -126,7 +126,6 @@ def farming_details_form(request):
         if form.is_valid():
             form.save()
             return redirect('/profile')
-    
     return render(request, 'details.html', {'form': form})
 
 @login_required

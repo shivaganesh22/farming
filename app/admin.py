@@ -4,3 +4,4 @@ from django.contrib import admin
 from .models import *
 admin.site.register(Production)
 admin.site.register(Product)
+admin.site.register(FarmingDetails)
